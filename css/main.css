@@ -1,6 +1,54 @@
-/* Styles imported from html file */
-/* GLOBAL STYLES */
+
+dy, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 body {
+    line-height: 1;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+strong, b {
+    font-weight: bold;
+}
+em, i {
+    font-style: italic;
+}
+a img {
+    border: none;
+}
+/* END RESET*/
+
+/* GLOBAL STYLES */
+html {
     box-shadow: 0 0 0 30px #000 inset;
     padding: 0 30px;
 }
@@ -11,15 +59,15 @@ h1 {
     font-size: 7vw;
     margin-top: 0;
 }
+a {
+    color: #f00;
+}
 h2 ~ p {
     font-size: 0.8em;
     font-style: italic;
     margin: 1em auto 0;
     max-width: 70%;
     text-align: center;
-}
-a {
-    color: #f00;
 }
 
 /* HEADER STYLES */
@@ -35,30 +83,29 @@ a {
     box-sizing: border-box;
     display: block;
     height: 10vh;
+    left: -30px;
     padding-top: 10px;
     position: relative;
     text-align: center;
     width: 10vh;
-    left: -30px;
 }
 .header-logo:hover,
 .header-logo:active {
-      background-color: #ed6e2f;
-      opacity: 0.5;
+    background-color: #ed6e2f;
 }
 .header-logo img {
     height: 80%;
 }
 .header-nav {
     float: right;
+    padding: 5.5vh 60px 0 0;
 }
 .header-nav > li {
     display: inline-block;
-    margin: 5.5vh 60px 0 0;
-    padding-left: 1em;
+    margin-left: 1em;
 }
 .header-nav > li ~ li {
-    border-left: 1px solid rgba(255,255,255,0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     padding-left: 1em;
 }
 .header-nav a {
@@ -71,14 +118,14 @@ a {
     text-transform: uppercase;
 }
 .nav-links a:hover,
-.nav-links a:active {
+.nav-links a:active  {
     color: #ed6e2f;
 }
 .header-nav > li:first-child a {
     color: #ed6e2f;
 }
 .header-nav > li:first-child a:hover {
-    color: #000;
+    color: #fff;
 }
 
 /* FOOTER STYLES */
@@ -100,7 +147,7 @@ a {
 }
 .footer-nav li {
     display: inline-block;
-    margin 2em 1em 0;
+    margin: 2em 1em 0;
 }
 .footer-nav a {
     color: #ccc;
@@ -108,8 +155,7 @@ a {
 
 /* HERO STYLES */
 .full-hero {
-    /*background-color: #c7dbfc;*/
-    background-color: rgba(0,0,0,0.1);
+    background-color: #c7dbfc;
     height: 50vh;
 }
 
@@ -136,10 +182,6 @@ a {
     vertical-align: middle;
     width: 2.5em;
 }
-.social-link:hover,
-.social-link:active {
-    background: rgba(150,150,150,1);
-}
 .social-list > li {
     display: inline-block;
     margin: 0 0.5em;
@@ -154,12 +196,11 @@ a {
 }
 .bio-box {
     border: 1px solid black;
-    border-color: rgba(0,0,0,1) black red;
     box-sizing: border-box;
     float: left;
     font-size: 1rem;
     margin: 40px 1% 0;
-    padding: 0 2% 2%;
+    padding: 2%;
     width: 23%;
 }
 .bio-box h3 {
@@ -177,7 +218,6 @@ a {
 }
 .bio-copy {
     font-size: 1em;
-    line-height: 1.5;
 }
 .bio-copy a {
     color: green;
